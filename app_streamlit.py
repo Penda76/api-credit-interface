@@ -11,7 +11,7 @@ st.markdown("Choisissez un identifiant client pour simuler une prédiction.")
 @st.cache_data
 def load_ids():
     try:
-        df = pd.read_csv("X_test_sample_id.csv")
+        df = pd.read_csv("data_sample/X_test_clean.csv")
         if "SK_ID_CURR" in df.columns:
             return df["SK_ID_CURR"].astype(int).tolist()
         else:
